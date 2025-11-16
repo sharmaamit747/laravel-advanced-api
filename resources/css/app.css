@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.row-flex {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* vertical center */
+    gap: 0.5rem;
+    /* optional spacing between items */
+}
+
+/* Make both children equal width and match height */
+.row-flex .flex-item {
+    flex: 1 1 0;
+    /* grow and shrink equally */
+    min-width: 0;
+    /* prevents overflow of long content */
+    display: flex;
+    /* allow vertical centering inside each item */
+    align-items: center;
+}
+
+/* Right-align the content of the second item */
+.row-flex .flex-item.right {
+    justify-content: flex-end;
+    /* pushes its content to the right */
+    text-align: right;
+    /* backup for inline content */
+}
+
+.text-link {
+    color: blue;
+}
+
+.or-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.or-text {
+    font-weight: 600;
+    color: #666;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.width-100 {
+    width: 100%;
+}
